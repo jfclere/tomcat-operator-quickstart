@@ -8,6 +8,7 @@ Usage
 To build a docker image using the tomcat-s2i do the following.
 ```bash
 $ git clone https://github.com/jfclere/tomcat-operator-quickstart.git
+$ cd tomcat-operator-quickstart
 $ export IMAGE_BUILDER_TAG=${USER}/tomcat-s2i
 $ export IMAGE_TAG=docker.io/${USER}/tomcat-app
 $ s2i build . ${IMAGE_BUILDER_TAG} ${IMAGE_TAG}
