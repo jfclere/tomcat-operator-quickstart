@@ -5,7 +5,7 @@ The repository just demos the use of https://github.com/web-servers/tomcat-s2i i
 
 Usage
 
-To build a docker image using the tomcat-s2i do the following.
+To build a docker image using the tomcat-s2i do the following. Don't forget to start docker before.
 ```bash
 $ git clone https://github.com/jfclere/tomcat-operator-quickstart.git
 $ cd tomcat-operator-quickstart
