@@ -6,17 +6,20 @@ The repository just demos the use of https://github.com/web-servers/tomcat-s2i i
 Usage
 
 To build a docker image using the tomcat-s2i do the following.
-
-$ s2i build . [IMAGE_BUILDER_TAG] [IMAGE_TAG]
-
+```bash
+$ git clone https://github.com/jfclere/tomcat-operator-quickstart.git
+$ export IMAGE_BUILDER_TAG=${USER}/tomcat-s2i
+$ export IMAGE_TAG=docker.io/${USER}/tomcat-app
+$ s2i build . ${IMAGE_BUILDER_TAG} ${IMAGE_TAG}
+```
 To test:
-
-$ docker run -p 8080:8080 [IMAGE_TAG]
-
+```bash
+$ docker run -p 8080:8080 ${IMAGE_TAG}
+```
 To curl the curl
-
+```bash
 $ curl http://localhost:8080/
-
+```
 To use it with the tomcat operator push it to docker hub and configure the quickstart-cr.yaml accordingly.
 
 applicationImage: "[IMAGE_TAG]
