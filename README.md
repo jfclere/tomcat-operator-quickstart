@@ -22,8 +22,12 @@ To curl the curl
 $ curl http://localhost:8080/
 ```
 To use it with the tomcat operator push it to docker hub and configure the quickstart-cr.yaml accordingly.
-
-applicationImage: "[IMAGE_TAG]
+```bash
+$ docker login docker.io -u ${USER}
+$ docker push ${IMAGE_TAG}
+```
+Edit ./quickstart-cr.yaml ajust the line:
+applicationImage: ${IMAGE_TAG}
 
 Install the operator look to https://github.com/web-servers/tomcat-operator for instructions.
 
